@@ -16,7 +16,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deployment
 
-The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+The site is automatically deployed to GitHub Pages when changes are pushed to the master branch.
 
 ## Technologies Used
 
