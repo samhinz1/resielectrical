@@ -9,7 +9,7 @@ interface ImageProps extends Omit<NextImageProps, 'src'> {
  */
 export function Image({ src, ...props }: ImageProps) {
   // Use basePath for GitHub Pages deployment
-  const basePath = process.env.NODE_ENV === 'production' ? '/tmelectrical' : '';
+  const basePath = process.env.NODE_ENV === 'production' ? '/lopeselectrical' : '';
   
   // Add basePath only for local images (not for external URLs)
   const imageSrc = src.startsWith('http') ? src : `${basePath}${src}`;

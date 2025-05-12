@@ -16,25 +16,25 @@ export default function Home() {
       <header className="bg-[#f5f5f5] py-4 px-4 md:px-6">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-2 text-[#242131] text-2xl font-medium">
+            <Link href={`${basePath}/`} className="flex items-center gap-2 text-[#242131] text-2xl font-medium">
               <div className="w-8 h-8 relative">
-                <Image src="/zap.svg" alt="Lopes Electrical Logo" width={32} height={32} />
+                <Image src={`${basePath}/zap.svg`} alt="Lopes Electrical Logo" width={32} height={32} />
               </div>
               <span>Lopes Electrical</span>
             </Link>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/about" className="text-[#242131] hover:text-[#494544]">
+            <Link href={`${basePath}/about`} className="text-[#242131] hover:text-[#494544]">
               About us
             </Link>
-            <Link href="/services" className="text-[#242131] hover:text-[#494544]">
+            <Link href={`${basePath}/services`} className="text-[#242131] hover:text-[#494544]">
               Services
             </Link>
-            <Link href="/projects" className="text-[#242131] hover:text-[#494544]">
+            <Link href={`${basePath}/projects`} className="text-[#242131] hover:text-[#494544]">
               Projects
             </Link>
-            <Link href="/contact" className="text-[#242131] hover:text-[#494544]">
+            <Link href={`${basePath}/contact`} className="text-[#242131] hover:text-[#494544]">
               Contact
             </Link>
           </nav>
@@ -66,7 +66,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative h-[400px] md:h-[500px]">
                 <Image
-                  src="/tmesphoto1.avif"
+                  src={`${basePath}/tmesphoto1.avif`}
                   alt="Electrician in orange hard hat"
                   fill
                   className="object-contain"
@@ -120,7 +120,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/tambourinemountain.avif"
+                  src={`${basePath}/tambourinemountain.avif`}
                   alt="Electrician on ladder"
                   fill
                   className="object-cover filter grayscale"
@@ -262,7 +262,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-6">
             <div className="flex items-center gap-2 mb-6">
-              <Image src="/zap.svg" alt="Lopes Electrical Logo" width={24} height={24} />
+              <Image src={`${basePath}/zap.svg`} alt="Lopes Electrical Logo" width={24} height={24} />
               <span className="text-xl font-medium text-[#242131]">Lopes Electrical</span>
             </div>
           </div>
@@ -271,22 +271,22 @@ export default function Home() {
             <h3 className="font-medium text-[#242131] mb-4">Menu</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-[#494544] hover:text-[#242131]">
+                <Link href={`${basePath}/`} className="text-[#494544] hover:text-[#242131]">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-[#494544] hover:text-[#242131]">
+                <Link href={`${basePath}/about`} className="text-[#494544] hover:text-[#242131]">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-[#494544] hover:text-[#242131]">
+                <Link href={`${basePath}/services`} className="text-[#494544] hover:text-[#242131]">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-[#494544] hover:text-[#242131]">
+                <Link href={`${basePath}/contact`} className="text-[#494544] hover:text-[#242131]">
                   Contact
                 </Link>
               </li>
@@ -297,12 +297,12 @@ export default function Home() {
             <h3 className="font-medium text-[#242131] mb-4">Utilities</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/privacy-policy" className="text-[#494544] hover:text-[#242131]">
+                <Link href={`${basePath}/privacy-policy`} className="text-[#494544] hover:text-[#242131]">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/feedback" className="text-[#494544] hover:text-[#242131]">
+                <Link href={`${basePath}/feedback`} className="text-[#494544] hover:text-[#242131]">
                   Feedback
                 </Link>
               </li>
@@ -315,7 +315,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto border-t border-[#494544]/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-[#494544] text-sm w-full md:w-auto text-center md:text-left">
             © 2024{" "}
-            <Link href="/" className="text-[#242131]">
+            <Link href={`${basePath}/`} className="text-[#242131]">
               Lopes Electrical
             </Link>
             . All rights reserved.
