@@ -36,7 +36,7 @@ export default function Home() {
             </Link>
           </nav>
 
-          <Button className="bg-[#f21d2a] hover:bg-[#f21d2a]/90 text-white rounded-md">07 5545 7777</Button>
+          <Button className="bg-[#f21d2a] hover:bg-[#f21d2a]/90 text-white rounded-md">Contact US</Button>
         </div>
       </header>
 
