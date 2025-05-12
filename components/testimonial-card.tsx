@@ -1,5 +1,5 @@
 import { Star } from "lucide-react"
-import Image from "next/image"
+import { Image } from "@/components/ui/image"
 
 interface TestimonialCardProps {
   quote: string
@@ -22,7 +22,7 @@ export default function TestimonialCard({ quote, author, rating, image = "/place
       <div className="flex items-center gap-3 pt-2">
         <div className="w-12 h-12 rounded-full overflow-hidden relative border-2 border-[#f21d2a]/20">
           <Image 
-            src={image || "https://randomuser.me/api/portraits/women/44.jpg"} 
+            src={image} 
             alt={author} 
             width={48} 
             height={48} 

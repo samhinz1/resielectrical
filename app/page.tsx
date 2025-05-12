@@ -1,12 +1,15 @@
-import Image from "next/image"
 import Link from "next/link"
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import ServiceCard from "@/components/service-card"
 import TestimonialCard from "@/components/testimonial-card"
+import { Image } from "@/components/ui/image"
 
 export default function Home() {
+  // Define basePath for GitHub Pages deployment
+  const basePath = process.env.NODE_ENV === 'production' ? '/tmelectrical' : '';
+  
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
@@ -255,97 +258,93 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#494544]/20 py-12 px-4 md:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
-            <div>
-              <Link href="/" className="flex items-center gap-2 text-[#242131] text-2xl font-medium mb-6">
-                <div className="w-32 h-32 relative">
-                  <Image src="/tmes.png" alt="TMES Electrical Logo" width={90} height={90} />
-                </div>
-              </Link>
+      <footer className="bg-[#242131] text-white py-12 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div className="flex items-center gap-2 mb-6">
+              <Image src="/tmes.png" alt="TMES Electrical Logo" width={64} height={64} />
             </div>
-
-            <div>
-              <h3 className="font-medium text-[#242131] mb-4">Menu</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/" className="text-[#494544] hover:text-[#242131]">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="text-[#494544] hover:text-[#242131]">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services" className="text-[#494544] hover:text-[#242131]">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-[#494544] hover:text-[#242131]">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-medium text-[#242131] mb-4">Utilities</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/privacy-policy" className="text-[#494544] hover:text-[#242131]">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/feedback" className="text-[#494544] hover:text-[#242131]">
-                    Feedback
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            
           </div>
 
-          <div className="border-t border-[#494544]/20 pt-6 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-[#494544] text-sm mb-4 md:mb-0">
-              © 2024{" "}
-              <Link href="/" className="text-[#242131]">
-                TMES Electrical
-              </Link>
-              . All rights reserved.
-            </div>
+          <div>
+            <h3 className="font-medium text-[#242131] mb-4">Menu</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/" className="text-[#494544] hover:text-[#242131]">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-[#494544] hover:text-[#242131]">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-[#494544] hover:text-[#242131]">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-[#494544] hover:text-[#242131]">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-medium text-[#242131] mb-4">Utilities</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/privacy-policy" className="text-[#494544] hover:text-[#242131]">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/feedback" className="text-[#494544] hover:text-[#242131]">
+                  Feedback
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          
+        </div>
+
+        <div className="border-t border-[#494544]/20 pt-6 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-[#494544] text-sm mb-4 md:mb-0">
+            © 2024{" "}
+            <Link href="/" className="text-[#242131]">
+              TMES Electrical
+            </Link>
+            . All rights reserved.
+          </div>
 
 
-            <div className="flex items-center gap-2 text-[#494544] text-sm mt-4 md:mt-0">
-              <span>Designed and developed by</span>
-              <Link href="#" className="text-[#242131]">
-                Sam Hinz
-              </Link>
-            </div>
+          <div className="flex items-center gap-2 text-[#494544] text-sm mt-4 md:mt-0">
+            <span>Designed and developed by</span>
+            <Link href="#" className="text-[#242131]">
+              Sam Hinz
+            </Link>
+          </div>
 
-            <div className="flex items-center gap-4 mt-6 md:mt-0">
-              <Link href="#" className="text-[#242131] hover:text-[#494544]">
-                <Facebook size={20} />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-[#242131] hover:text-[#494544]">
-                <Instagram size={20} />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-[#242131] hover:text-[#494544]">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-[#242131] hover:text-[#494544]">
-                <Linkedin size={20} />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-            </div>
+          <div className="flex items-center gap-4 mt-6 md:mt-0">
+            <Link href="#" className="text-[#242131] hover:text-[#494544]">
+              <Facebook size={20} />
+              <span className="sr-only">Facebook</span>
+            </Link>
+            <Link href="#" className="text-[#242131] hover:text-[#494544]">
+              <Instagram size={20} />
+              <span className="sr-only">Instagram</span>
+            </Link>
+            <Link href="#" className="text-[#242131] hover:text-[#494544]">
+              <Twitter size={20} />
+              <span className="sr-only">Twitter</span>
+            </Link>
+            <Link href="#" className="text-[#242131] hover:text-[#494544]">
+              <Linkedin size={20} />
+              <span className="sr-only">LinkedIn</span>
+            </Link>
           </div>
         </div>
       </footer>
