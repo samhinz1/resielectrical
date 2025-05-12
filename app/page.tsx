@@ -258,15 +258,15 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#242131] text-white py-12 px-4 md:px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
+      <footer className="bg-[#f5f5f5] py-12 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+          <div className="md:col-span-6">
             <div className="flex items-center gap-2 mb-6">
               <Image src="/tmes.png" alt="TMES Electrical Logo" width={64} height={64} />
             </div>
           </div>
 
-          <div>
+          <div className="md:col-span-3 md:text-right">
             <h3 className="font-medium text-[#242131] mb-4">Menu</h3>
             <ul className="space-y-2">
               <li>
@@ -292,7 +292,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div>
+          <div className="md:col-span-3 md:text-right">
             <h3 className="font-medium text-[#242131] mb-4">Utilities</h3>
             <ul className="space-y-2">
               <li>
@@ -311,8 +311,8 @@ export default function Home() {
           
         </div>
 
-        <div className="border-t border-[#494544]/20 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-[#494544] text-sm mb-4 md:mb-0">
+        <div className="max-w-6xl mx-auto border-t border-[#494544]/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-[#494544] text-sm w-full md:w-auto text-center md:text-left">
             © 2024{" "}
             <Link href="/" className="text-[#242131]">
               TMES Electrical
@@ -320,15 +320,7 @@ export default function Home() {
             . All rights reserved.
           </div>
 
-
-          <div className="flex items-center gap-2 text-[#494544] text-sm mt-4 md:mt-0">
-            <span>Designed and developed by</span>
-            <Link href="#" className="text-[#242131]">
-              Sam Hinz
-            </Link>
-          </div>
-
-          <div className="flex items-center gap-4 mt-6 md:mt-0">
+          <div className="flex items-center justify-center gap-4 mt-6 md:mt-0 w-full md:w-auto">
             <Link href="#" className="text-[#242131] hover:text-[#494544]">
               <Facebook size={20} />
               <span className="sr-only">Facebook</span>
@@ -346,6 +338,7 @@ export default function Home() {
               <span className="sr-only">LinkedIn</span>
             </Link>
           </div>
+
         </div>
       </footer>
     </div>
