@@ -8,11 +8,7 @@ interface ImageProps extends Omit<NextImageProps, 'src'> {
  * A custom Image component that handles GitHub Pages basePath for image sources
  */
 export function Image({ src, ...props }: ImageProps) {
-  // Use basePath for GitHub Pages deployment
-  const basePath = process.env.NODE_ENV === 'production' ? '/lopeselectrical' : '';
-  
-  // Add basePath only for local images (not for external URLs)
-  const imageSrc = src.startsWith('http') ? src : `${basePath}${src}`;
-  
-  return <NextImage src={imageSrc} {...props} />;
+  // Since we're now manually adding basePath in the component usage,
+  // we don't need to add it again here to avoid double paths
+  return <NextImage src={src} {...props} />;
 } 
