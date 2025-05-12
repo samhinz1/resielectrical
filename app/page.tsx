@@ -8,7 +8,7 @@ import { Image } from "@/components/ui/image"
 
 export default function Home() {
   // Define basePath for GitHub Pages deployment
-  const basePath = process.env.NODE_ENV === 'production' ? '/tmelectrical' : '';
+  const basePath = process.env.NODE_ENV === 'production' ? '/lopeselectrical' : '';
   
   return (
     <div className="flex flex-col min-h-screen">
@@ -17,10 +17,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2 text-[#242131] text-2xl font-medium">
-              <div className="w-18 h-18 relative">
-                <Image src="/tmes.png" alt="TMES Electrical Logo" width={80} height={80} />
+              <div className="w-8 h-8 relative">
+                <Image src="/zap.svg" alt="Lopes Electrical Logo" width={32} height={32} />
               </div>
-              
+              <span>Lopes Electrical</span>
             </Link>
           </div>
 
@@ -195,19 +195,19 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <TestimonialCard
-                quote="Outstanding service! TMES Electrical truly exceeded my expectations. From start to finish, their team exhibited professionalism and expertise. I'm thrilled with the quality of their workmanship. Highly recommend!"
+                quote="Outstanding service! Lopes Electrical truly exceeded my expectations. From start to finish, their team exhibited professionalism and expertise. I'm thrilled with the quality of their workmanship. Highly recommend!"
                 author="Sarah Johnson"
                 rating={5}
                 image="https://randomuser.me/api/portraits/women/44.jpg"
               />
               <TestimonialCard
-                quote="TMES Electrical saved the day! I was facing a tricky electrical issue at home, and their quick response and efficient troubleshooting resolved it in no time. Friendly staff, excellent service. Thank you, TMES Electrical!"
+                quote="Lopes Electrical saved the day! I was facing a tricky electrical issue at home, and their quick response and efficient troubleshooting resolved it in no time. Friendly staff, excellent service. Thank you, Lopes Electrical!"
                 author="Michael Chang"
                 rating={5}
                 image="https://randomuser.me/api/portraits/men/32.jpg"
               />
               <TestimonialCard
-                quote="Impressive work by TMES Electrical! Their attention to detail and dedication to ensuring our electrical needs were met with precision and care were truly commendable. We couldn't be happier with the results."
+                quote="Impressive work by Lopes Electrical! Their attention to detail and dedication to ensuring our electrical needs were met with precision and care were truly commendable. We couldn't be happier with the results."
                 author="Emily Patel"
                 rating={5}
                 image="https://randomuser.me/api/portraits/women/68.jpg"
@@ -248,7 +248,7 @@ export default function Home() {
             <div className="space-y-6">
               <p className="text-white text-lg">
                 With years of experience serving residential homes in the area, we're committed to delivering reliable
-                and expert electrical solutions tailored to your needs. Trust TMES Electrical for all your home electrical needs,
+                and expert electrical solutions tailored to your needs. Trust Lopes Electrical for all your home electrical needs,
                 get a quote today!
               </p>
               <Button className="bg-[#f21d2a] hover:bg-[#f21d2a]/90 text-white rounded-md">Get a quote</Button>
@@ -262,7 +262,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-6">
             <div className="flex items-center gap-2 mb-6">
-              <Image src="/tmes.png" alt="TMES Electrical Logo" width={64} height={64} />
+              <Image src="/zap.svg" alt="Lopes Electrical Logo" width={24} height={24} />
+              <span className="text-xl font-medium text-[#242131]">Lopes Electrical</span>
             </div>
           </div>
 
@@ -315,7 +316,7 @@ export default function Home() {
           <div className="text-[#494544] text-sm w-full md:w-auto text-center md:text-left">
             © 2024{" "}
             <Link href="/" className="text-[#242131]">
-              TMES Electrical
+              Lopes Electrical
             </Link>
             . All rights reserved.
           </div>
