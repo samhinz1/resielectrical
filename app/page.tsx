@@ -43,7 +43,7 @@ const cardVariant = {
 
 export default function Home() {
   // Define basePath for GitHub Pages deployment
-  const basePath = process.env.NODE_ENV === 'production' ? '/INSERTHERE' : '';
+  const basePath = process.env.NODE_ENV === 'production' ? '/dyelectrical' : '';
   
   return (
     <div className="flex flex-col min-h-screen">

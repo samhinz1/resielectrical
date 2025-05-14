@@ -1,6 +1,6 @@
-# Lopes Electrical Website
+# DY Electrical Website
 
-This is the official website for Lopes Electrical, built with Next.js and deployed on GitHub Pages.
+This is the official website for DY Electrical, built with Next.js and deployed on GitHub Pages.
 
 ## Development
 
@@ -26,4 +26,4 @@ The site is automatically deployed to GitHub Pages when changes are pushed to th
 
 ## License
 
-© 2024 Lopes Electrical. All rights reserved. 
+© 2024 DY Electrical. All rights reserved. 
