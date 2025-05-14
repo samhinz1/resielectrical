@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Image } from "@/components/ui/image"
 import { Menu, Phone, X } from "lucide-react"
@@ -13,7 +13,45 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
+// Menu animation variants
+const menuVariants = {
+  hidden: { 
+    x: "100%",
+    opacity: 0,
+    transition: { 
+      duration: 0.4, 
+      ease: [0.25, 1, 0.5, 1] 
+    }
+  },
+  visible: { 
+    x: "0%",
+    opacity: 1,
+    transition: { 
+      duration: 0.4, 
+      ease: [0.25, 1, 0.5, 1],
+      staggerChildren: 0.1,
+      when: "beforeChildren"
+    }
+  }
+}
+
+const menuItemVariants = {
+  hidden: { 
+    y: 10, 
+    opacity: 0
+  },
+  visible: { 
+    y: 0, 
+    opacity: 1,
+    transition: { 
+      duration: 0.3
+    }
+  }
+}
+
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false)
+  
   return (
     <motion.header 
       initial={{ y: -10, opacity: 0 }}
@@ -93,7 +131,7 @@ export default function Header() {
           </motion.div>
 
           {/* Mobile Hamburger Menu */}
-          <Sheet>
+          <Sheet onOpenChange={(open) => setIsOpen(open)}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon" className="p-0">
                 <svg
@@ -115,42 +153,57 @@ export default function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="pt-12">
-              <nav className="flex flex-col space-y-6">
-                <Link 
-                  href={`${config.basePath}/about`} 
-                  className="text-lg font-medium text-[#242131] hover:text-[#494544]"
-                >
-                  About us
-                </Link>
-                <Link 
-                  href={`${config.basePath}/services`} 
-                  className="text-lg font-medium text-[#242131] hover:text-[#494544]"
-                >
-                  Services
-                </Link>
-                <Link 
-                  href={`${config.basePath}/projects`} 
-                  className="text-lg font-medium text-[#242131] hover:text-[#494544]"
-                >
-                  Projects
-                </Link>
-                <Link 
-                  href={`${config.basePath}/contact`} 
-                  className="text-lg font-medium text-[#242131] hover:text-[#494544]"
-                >
-                  Contact
-                </Link>
-                
-                <div className="pt-4">
-                  <a href={`tel:${config.phoneNumber.replace(/\s/g, '')}`} className="w-full block">
-                    <Button className="w-full bg-[#d4af37] hover:bg-[#d4af37]/90 text-white rounded-md">
-                      <Phone size={18} className="mr-2" />
-                      {config.phoneNumber}
-                    </Button>
-                  </a>
-                </div>
-              </nav>
+            <SheetContent side="right" className="p-0 overflow-hidden bg-transparent shadow-none border-none">
+              <motion.div
+                initial="hidden"
+                animate={isOpen ? "visible" : "hidden"}
+                variants={menuVariants}
+                className="h-full w-full bg-white shadow-lg pt-12 px-6"
+              >
+                <nav className="flex flex-col space-y-6">
+                  <motion.div variants={menuItemVariants}>
+                    <Link 
+                      href={`${config.basePath}/about`} 
+                      className="text-lg font-medium text-[#242131] hover:text-[#494544]"
+                    >
+                      About us
+                    </Link>
+                  </motion.div>
+                  <motion.div variants={menuItemVariants}>
+                    <Link 
+                      href={`${config.basePath}/services`} 
+                      className="text-lg font-medium text-[#242131] hover:text-[#494544]"
+                    >
+                      Services
+                    </Link>
+                  </motion.div>
+                  <motion.div variants={menuItemVariants}>
+                    <Link 
+                      href={`${config.basePath}/projects`} 
+                      className="text-lg font-medium text-[#242131] hover:text-[#494544]"
+                    >
+                      Projects
+                    </Link>
+                  </motion.div>
+                  <motion.div variants={menuItemVariants}>
+                    <Link 
+                      href={`${config.basePath}/contact`} 
+                      className="text-lg font-medium text-[#242131] hover:text-[#494544]"
+                    >
+                      Contact
+                    </Link>
+                  </motion.div>
+                  
+                  <motion.div variants={menuItemVariants} className="pt-4">
+                    <a href={`tel:${config.phoneNumber.replace(/\s/g, '')}`} className="w-full block">
+                      <Button className="w-full bg-[#d4af37] hover:bg-[#d4af37]/90 text-white rounded-md">
+                        <Phone size={18} className="mr-2" />
+                        {config.phoneNumber}
+                      </Button>
+                    </a>
+                  </motion.div>
+                </nav>
+              </motion.div>
             </SheetContent>
           </Sheet>
         </div>

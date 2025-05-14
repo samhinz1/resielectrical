@@ -9,6 +9,7 @@ import { Image } from "@/components/ui/image"
 import { motion } from "framer-motion"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import { Phone, FileText, Users, Info, ClipboardEdit } from "lucide-react"
 
 // Animation variants
 const fadeIn = {
@@ -103,14 +104,20 @@ export default function Home() {
               </motion.div>
               
               <div className="flex flex-wrap gap-4 pt-4">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button className="bg-[#242131] hover:bg-[#242131]/90 text-[#d4af37] rounded-md">Get a free quote</Button>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button variant="outline" className="border-[#d4af37] text-[#242131] hover:bg-[#d4af37]/10 rounded-md">
-                    Call us now
-                  </Button>
-                </motion.div>
+                <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-4">
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
+                    <Button className="bg-[#242131] hover:bg-[#242131]/90 text-[#d4af37] rounded-md text-lg py-6 px-6 flex items-center gap-2 shadow-lg border border-[#d4af37] w-full justify-center">
+                      <ClipboardEdit className="h-5 w-5" />
+                      Get your free quote
+                    </Button>
+                  </motion.div>
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
+                    <Button variant="outline" className="border-[#d4af37] text-[#242131] hover:bg-[#d4af37]/10 rounded-md text-lg py-6 px-6 flex items-center gap-2 shadow-md w-full justify-center">
+                      <Phone className="h-5 w-5" />
+                      Call us now
+                    </Button>
+                  </motion.div>
+                </div>
               </div>
             </motion.div>
             <motion.div 
@@ -309,10 +316,14 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-4 pt-4">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button className="bg-[#242131] hover:bg-[#242131]/90 text-[#d4af37] rounded-md">About us</Button>
+                  <Button className="bg-[#242131] hover:bg-[#242131]/90 text-[#d4af37] rounded-md text-lg py-6 px-6 flex items-center gap-2 shadow-lg border border-[#d4af37]">
+                    <Info className="h-5 w-5" />
+                    About us
+                  </Button>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button variant="outline" className="border-[#d4af37] text-[#242131] hover:bg-[#d4af37]/10 rounded-md">
+                  <Button variant="outline" className="border-[#d4af37] text-[#242131] hover:bg-[#d4af37]/10 rounded-md text-lg py-6 px-6 flex items-center gap-2 shadow-md">
+                    <Users className="h-5 w-5" />
                     Meet the team
                   </Button>
                 </motion.div>
@@ -341,21 +352,6 @@ export default function Home() {
                 Dive into a collection of testimonials that showcase our dedication to exceeding expectations in every
                 electrical project.
               </p>
-              <motion.div 
-                animate={{ 
-                  y: [0, 5, 0],
-                }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity,
-                  repeatType: "reverse"
-                }}
-                className="absolute top-0 right-0 w-32 h-16"
-              >
-                <svg viewBox="0 0 120 60" className="w-full h-full">
-                  <path d="M0,30 C40,0 80,60 120,30" stroke="#494544" strokeWidth="3" fill="none" />
-                </svg>
-              </motion.div>
             </motion.div>
 
             {/* Infinite testimonial carousel */}
@@ -544,7 +540,10 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }} 
                 whileTap={{ scale: 0.95 }}
               >
-                <Button className="bg-[#d4af37] hover:bg-[#d4af37]/90 text-[#242131] rounded-md font-medium">Get a quote</Button>
+                <Button className="bg-[#d4af37] hover:bg-[#d4af37]/90 text-[#242131] rounded-md font-medium text-lg py-6 px-6 flex items-center gap-2 shadow-lg">
+                  <ClipboardEdit className="h-5 w-5" />
+                  Get a quote
+                </Button>
               </motion.div>
             </motion.div>
           </div>
