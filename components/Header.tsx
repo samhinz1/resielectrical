@@ -1,12 +1,12 @@
 "use client"
 
 import Link from "next/link"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Image } from "@/components/ui/image"
 import { Menu, Phone, X } from "lucide-react"
 import { config } from "@/lib/config"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import {
   Sheet,
   SheetContent,
@@ -51,12 +51,41 @@ const menuItemVariants = {
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const lastScrollY = useRef(0)
+  const { scrollY } = useScroll()
+  
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    // Only apply hide/show behavior on mobile
+    if (window.innerWidth < 768) {
+      const currentScrollY = latest
+      
+      if (currentScrollY <= 10) {
+        // Always show header at the top of the page
+        setIsVisible(true)
+      } else if (currentScrollY < lastScrollY.current) {
+        // Scrolling up, show header
+        setIsVisible(true)
+      } else if (currentScrollY > lastScrollY.current) {
+        // Scrolling down, hide header
+        setIsVisible(false)
+      }
+      
+      lastScrollY.current = currentScrollY
+    } else {
+      // Always visible on desktop
+      setIsVisible(true)
+    }
+  })
   
   return (
     <motion.header 
       initial={{ y: -10, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4 }}
+      animate={{ 
+        y: isVisible ? 0 : -100,
+        opacity: isVisible ? 1 : 0
+      }}
+      transition={{ duration: 0.3 }}
       className="bg-[#f5f5f5] py-4 px-4 md:px-6 sticky top-0 z-50 shadow-sm"
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between">
