@@ -10,6 +10,7 @@ import { motion } from "framer-motion"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Phone, FileText, Users, Info, ClipboardEdit } from "lucide-react"
+import { config } from "@/lib/config"
 
 // Animation variants
 const fadeIn = {
@@ -112,9 +113,11 @@ export default function Home() {
                     </Button>
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
-                    <Button variant="outline" className="border-[#d4af37] text-[#242131] hover:bg-[#d4af37]/10 rounded-md text-lg py-6 px-6 flex items-center gap-2 shadow-md w-full justify-center">
-                      <Phone className="h-5 w-5" />
-                      Call us now
+                    <Button variant="outline" className="border-[#d4af37] text-[#242131] hover:bg-[#d4af37]/10 rounded-md text-lg py-6 px-6 flex items-center gap-2 shadow-md w-full justify-center" asChild>
+                      <a href={`tel:${config.phoneNumber.replace(/\s/g, '')}`}>
+                        <Phone className="h-5 w-5" />
+                        Call us now
+                      </a>
                     </Button>
                   </motion.div>
                 </div>
