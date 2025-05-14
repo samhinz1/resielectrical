@@ -6,12 +6,12 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 // Define basePath for GitHub Pages deployment
-const basePath = process.env.NODE_ENV === 'production' ? '/lopeselectrical' : '';
+const basePath = process.env.NODE_ENV === 'production' ? '/dyelectrical' : '';
 
 export const metadata: Metadata = {
-  title: "Lopes Electrical - Quality Home Electrical Solutions",
+  title: "DY Electrical Services - Quality Home Electrical Solutions",
   description:
-    "Lopes Electrical Services",
+    "DY Electrical Services",
   icons: {
     icon: `${basePath}/zap.svg`,
     apple: `${basePath}/zap.svg`,

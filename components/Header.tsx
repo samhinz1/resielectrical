@@ -1,0 +1,160 @@
+"use client"
+
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { Image } from "@/components/ui/image"
+import { Menu, Phone, X } from "lucide-react"
+import { config } from "@/lib/config"
+import { useState } from "react"
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
+export default function Header() {
+  return (
+    <motion.header 
+      initial={{ y: -10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.4 }}
+      className="bg-[#f5f5f5] py-4 px-4 md:px-6 sticky top-0 z-50 shadow-sm"
+    >
+      <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <div className="flex items-center">
+          <Link href={`${config.basePath}/`} className="flex items-center gap-2 text-[#242131] text-base md:text-2xl font-medium">
+            <motion.div 
+              initial={{ rotate: -10 }}
+              animate={{ rotate: 0 }}
+              transition={{ duration: 0.5 }}
+              className="w-6 h-6 md:w-8 md:h-8 relative"
+            >
+              <Image src={`${config.basePath}/zap.svg`} alt="DY Electrical Services Logo" width={24} height={24} className="md:w-8 md:h-8" />
+            </motion.div>
+            <span className="text-sm md:text-xl">{config.companyName}</span>
+          </Link>
+        </div>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link href={`${config.basePath}/about`} className="text-[#242131] hover:text-[#494544]">
+            About us
+          </Link>
+          <Link href={`${config.basePath}/services`} className="text-[#242131] hover:text-[#494544]">
+            Services
+          </Link>
+          <Link href={`${config.basePath}/projects`} className="text-[#242131] hover:text-[#494544]">
+            Projects
+          </Link>
+          <Link href={`${config.basePath}/contact`} className="text-[#242131] hover:text-[#494544]">
+            Contact
+          </Link>
+        </nav>
+
+        {/* Desktop Call Button */}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="hidden md:block"
+        >
+          <Button className="bg-[#d4af37] hover:bg-[#d4af37]/90 text-white rounded-md">
+            <Phone size={18} className="mr-2" />
+            {config.phoneNumber}
+          </Button>
+        </motion.div>
+
+        {/* Mobile Controls */}
+        <div className="flex items-center gap-4 md:hidden">
+          {/* Mobile Phone Icon */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <a href={`tel:${config.phoneNumber.replace(/\s/g, '')}`} aria-label="Call us">
+              <Button variant="ghost" size="icon" className="p-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-[#242131]"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span className="sr-only">Call {config.phoneNumber}</span>
+              </Button>
+            </a>
+          </motion.div>
+
+          {/* Mobile Hamburger Menu */}
+          <Sheet>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon" className="p-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-[#242131]"
+                >
+                  <line x1="4" x2="20" y1="12" y2="12"></line>
+                  <line x1="4" x2="20" y1="6" y2="6"></line>
+                  <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="pt-12">
+              <nav className="flex flex-col space-y-6">
+                <Link 
+                  href={`${config.basePath}/about`} 
+                  className="text-lg font-medium text-[#242131] hover:text-[#494544]"
+                >
+                  About us
+                </Link>
+                <Link 
+                  href={`${config.basePath}/services`} 
+                  className="text-lg font-medium text-[#242131] hover:text-[#494544]"
+                >
+                  Services
+                </Link>
+                <Link 
+                  href={`${config.basePath}/projects`} 
+                  className="text-lg font-medium text-[#242131] hover:text-[#494544]"
+                >
+                  Projects
+                </Link>
+                <Link 
+                  href={`${config.basePath}/contact`} 
+                  className="text-lg font-medium text-[#242131] hover:text-[#494544]"
+                >
+                  Contact
+                </Link>
+                
+                <div className="pt-4">
+                  <a href={`tel:${config.phoneNumber.replace(/\s/g, '')}`} className="w-full block">
+                    <Button className="w-full bg-[#d4af37] hover:bg-[#d4af37]/90 text-white rounded-md">
+                      <Phone size={18} className="mr-2" />
+                      {config.phoneNumber}
+                    </Button>
+                  </a>
+                </div>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </motion.header>
+  )
+} 
