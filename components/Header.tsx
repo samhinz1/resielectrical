@@ -90,7 +90,7 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <Link href={`${config.basePath}/`} className="flex items-center gap-2 text-[#242131] text-base md:text-2xl font-medium">
+          <Link href={`${config.basePath}`} className="flex items-center gap-2 text-[#242131] text-base md:text-2xl font-medium">
             <motion.div 
               initial={{ rotate: -10 }}
               animate={{ rotate: 0 }}
