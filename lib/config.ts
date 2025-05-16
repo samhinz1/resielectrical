@@ -22,13 +22,13 @@ export const config = {
   // Visual branding
   branding: {
     logo: {
-      path: '/RESI LOGO.svg',
+      path: '/resi-logo.svg',
       width: 160,
       height: 80,
       altText: 'RESI Electrical Logo'
     },
     icon: {
-      path: '/RESI ICON.svg',
+      path: '/resi-icon.svg',
       width: 32,
       height: 32,
       altText: 'RESI Electrical Icon'
