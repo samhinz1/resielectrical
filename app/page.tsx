@@ -327,7 +327,7 @@ export default function Home() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button variant="outline" className="border-[#d4af37] text-[#242131] hover:bg-[#d4af37]/10 rounded-md text-lg py-6 px-6 flex items-center gap-2 shadow-md">
                     <Users className="h-5 w-5" />
-                    Meet the team
+                    Meet the team 
                   </Button>
                 </motion.div>
               </div>
