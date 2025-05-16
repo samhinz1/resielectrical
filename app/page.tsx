@@ -101,7 +101,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Image src={`${basePath}/googlelogo.webp`} alt="Google" width={16} height={16} className="object-contain" />
-                      <p className="text-sm font-medium text-[#d4af37]">From 200+ ratings</p>
+                      <p className="text-sm font-medium text-[#d4af37]">From 100+ reviews</p>
                     </div>
                   </div>
                 </div>
