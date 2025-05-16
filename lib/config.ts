@@ -1,7 +1,7 @@
 // Configuration values shared across components
 export const config = {
   // Base Paths and URLs
-  basePath: process.env.NODE_ENV === 'production' ? '/vpower' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/resielectrical' : '',
   
   // Company information
   companyName: 'RESI Electrical',
