@@ -1,7 +1,7 @@
 // Configuration values shared across components
 export const config = {
   // Define basePath for GitHub Pages deployment
-  basePath: process.env.NODE_ENV === 'production' ? '/vpowerelectrical' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/vpower' : '',
   
   // Company information
   companyName: 'VPower Electrical Services',

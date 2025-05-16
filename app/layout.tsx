@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 // Define basePath for GitHub Pages deployment
-const basePath = process.env.NODE_ENV === 'production' ? '/vpowerelectrical' : '';
+const basePath = process.env.NODE_ENV === 'production' ? '/vpower' : '';
 
 export const metadata: Metadata = {
   title: "VPOWER Electrical Services - Quality Home Electrical Solutions",
