@@ -17,8 +17,9 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
         <div className="md:col-span-6">
           <div className="flex items-center gap-2 mb-6">
-            <Image src={`${config.basePath}/zap.svg`} alt="DY Electrical Services Logo" width={24} height={24} />
-            <span className="text-xl font-medium text-[#242131]">{config.companyName}</span>
+            <div className="w-64 h-32 relative">
+              <Image src={`${config.basePath}/VPOWER.svg`} alt="VPower Electrical Services Logo" width={800} height={800} className="w-48 h-40" />
+            </div>
           </div>
         </div>
 

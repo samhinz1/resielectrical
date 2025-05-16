@@ -45,7 +45,7 @@ const cardVariant = {
 
 export default function Home() {
   // Define basePath for GitHub Pages deployment
-  const basePath = process.env.NODE_ENV === 'production' ? '/dyelectrical' : '';
+  const basePath = process.env.NODE_ENV === 'production' ? '/vpowerelectrical' : '';
   
   return (
     <div className="flex flex-col min-h-screen">
@@ -64,11 +64,11 @@ export default function Home() {
               className="space-y-6"
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-[#242131] leading-tight">
-                #1 Trusted Electrician in SE Queensland
+                #1 Trusted Electrician in Brisbane & Surrounds
               </h1>
               <div className="h-1 w-32 bg-[#d4af37]"></div>
               <p className="text-[#494544] text-lg">
-                We have been delivering quality residential and commercial electrical solutions to the Gold Coast & Brisbane for over 20 years.
+                We have been delivering quality residential and commercial electrical solutions to Brisbane & the surrounding areas for over 20 years.
               </p>
               
               {/* Rating Badge */}
@@ -99,7 +99,10 @@ export default function Home() {
                         </svg>
                       ))}
                     </div>
-                    <p className="text-sm font-medium text-[#d4af37]">From 2000+ ratings</p>
+                    <div className="flex items-center gap-2">
+                      <Image src={`${basePath}/googlelogo.webp`} alt="Google" width={16} height={16} className="object-contain" />
+                      <p className="text-sm font-medium text-[#d4af37]">From 200+ ratings</p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -132,10 +135,10 @@ export default function Home() {
             >
               <div className="relative h-[400px] rounded-lg md:h-[500px]">
                 <Image
-                  src={`${basePath}/tallecreek.avif`}
-                  alt="Tallebudgera Creek"
+                  src={`${basePath}/brisbane.avif`}
+                  alt="Brisbane"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                   style={{ borderRadius: '1rem' }}
                 />
                 <motion.div 
@@ -254,8 +257,8 @@ export default function Home() {
             >
               <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src={`${basePath}/brisbane.avif`}
-                  alt="Electrician on ladder"
+                  src={`${basePath}/powerline.avif`}
+                  alt="Powerline"
                   fill
                   className="object-cover"
                 />
@@ -378,7 +381,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
                     <div className="h-full">
                       <TestimonialCard
-                        quote="Outstanding service! DY Electrical Services truly exceeded my expectations. From start to finish, their team exhibited professionalism and expertise. I'm thrilled with the quality of their workmanship. Highly recommend!"
+                        quote="Outstanding service! VPower Electrical Services truly exceeded my expectations. From start to finish, their team exhibited professionalism and expertise. I'm thrilled with the quality of their workmanship. Highly recommend!"
                         author="Sarah Johnson"
                         rating={5}
                         image="https://randomuser.me/api/portraits/women/44.jpg"
@@ -388,7 +391,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
                     <div className="h-full">
                       <TestimonialCard
-                        quote="DY Electrical Services saved the day! I was facing a tricky electrical issue at home, and their quick response and efficient troubleshooting resolved it in no time. Friendly staff, excellent service. Thank you, DY Electrical Services!"
+                        quote="VPower Electrical Services saved the day! I was facing a tricky electrical issue at home, and their quick response and efficient troubleshooting resolved it in no time. Friendly staff, excellent service. Thank you, VPower Electrical Services!"
                         author="Michael Chang"
                         rating={5}
                         image="https://randomuser.me/api/portraits/men/32.jpg"
@@ -398,7 +401,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
                     <div className="h-full">
                       <TestimonialCard
-                        quote="Impressive work by DY Electrical Services! Their attention to detail and dedication to ensuring our electrical needs were met with precision and care were truly commendable. We couldn't be happier with the results."
+                        quote="Impressive work by VPower Electrical Services! Their attention to detail and dedication to ensuring our electrical needs were met with precision and care were truly commendable. We couldn't be happier with the results."
                         author="Emily Patel"
                         rating={5}
                         image="https://randomuser.me/api/portraits/women/68.jpg"
@@ -408,7 +411,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
                     <div className="h-full">
                       <TestimonialCard
-                        quote="The team at DY Electrical Services did an amazing job with our home rewiring project. They were professional, punctual, and worked cleanly. The pricing was fair, and the results are excellent!"
+                        quote="The team at VPower Electrical Services did an amazing job with our home rewiring project. They were professional, punctual, and worked cleanly. The pricing was fair, and the results are excellent!"
                         author="Robert Wilson"
                         rating={5}
                         image="https://randomuser.me/api/portraits/men/67.jpg"
@@ -418,7 +421,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
                     <div className="h-full">
                       <TestimonialCard
-                        quote="I've used DY Electrical Services several times for my business, and they never disappoint. Their knowledge and expertise are unmatched, and they always provide prompt and reliable service."
+                        quote="I've used VPower Electrical Services several times for my business, and they never disappoint. Their knowledge and expertise are unmatched, and they always provide prompt and reliable service."
                         author="Lisa Thompson"
                         rating={5}
                         image="https://randomuser.me/api/portraits/women/29.jpg"
@@ -430,7 +433,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
                     <div className="h-full">
                       <TestimonialCard
-                        quote="Outstanding service! DY Electrical Services truly exceeded my expectations. From start to finish, their team exhibited professionalism and expertise. I'm thrilled with the quality of their workmanship. Highly recommend!"
+                        quote="Outstanding service! VPower Electrical Services truly exceeded my expectations. From start to finish, their team exhibited professionalism and expertise. I'm thrilled with the quality of their workmanship. Highly recommend!"
                         author="Sarah Johnson"
                         rating={5}
                         image="https://randomuser.me/api/portraits/women/44.jpg"
@@ -440,7 +443,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
                     <div className="h-full">
                       <TestimonialCard
-                        quote="DY Electrical Services saved the day! I was facing a tricky electrical issue at home, and their quick response and efficient troubleshooting resolved it in no time. Friendly staff, excellent service. Thank you, DY Electrical Services!"
+                        quote="VPower Electrical Services saved the day! I was facing a tricky electrical issue at home, and their quick response and efficient troubleshooting resolved it in no time. Friendly staff, excellent service. Thank you, VPower Electrical Services!"
                         author="Michael Chang"
                         rating={5}
                         image="https://randomuser.me/api/portraits/men/32.jpg"
@@ -450,7 +453,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
                     <div className="h-full">
                       <TestimonialCard
-                        quote="Impressive work by DY Electrical Services! Their attention to detail and dedication to ensuring our electrical needs were met with precision and care were truly commendable. We couldn't be happier with the results."
+                        quote="Impressive work by VPower Electrical Services! Their attention to detail and dedication to ensuring our electrical needs were met with precision and care were truly commendable. We couldn't be happier with the results."
                         author="Emily Patel"
                         rating={5}
                         image="https://randomuser.me/api/portraits/women/68.jpg"
@@ -460,7 +463,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
                     <div className="h-full">
                       <TestimonialCard
-                        quote="The team at DY Electrical Services did an amazing job with our home rewiring project. They were professional, punctual, and worked cleanly. The pricing was fair, and the results are excellent!"
+                        quote="The team at VPower Electrical Services did an amazing job with our home rewiring project. They were professional, punctual, and worked cleanly. The pricing was fair, and the results are excellent!"
                         author="Robert Wilson"
                         rating={5}
                         image="https://randomuser.me/api/portraits/men/67.jpg"
@@ -470,7 +473,7 @@ export default function Home() {
                   <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
                     <div className="h-full">
                       <TestimonialCard
-                        quote="I've used DY Electrical Services several times for my business, and they never disappoint. Their knowledge and expertise are unmatched, and they always provide prompt and reliable service."
+                        quote="I've used VPower Electrical Services several times for my business, and they never disappoint. Their knowledge and expertise are unmatched, and they always provide prompt and reliable service."
                         author="Lisa Thompson"
                         rating={5}
                         image="https://randomuser.me/api/portraits/women/29.jpg"
@@ -536,7 +539,7 @@ export default function Home() {
             >
               <p className="text-white text-lg">
                 With years of experience serving residential homes in the area, we're committed to delivering reliable
-                and expert electrical solutions tailored to your needs. Trust DY Electrical Services for all your home electrical needs,
+                and expert electrical solutions tailored to your needs. Trust VPower Electrical Services for all your home electrical needs,
                 get a quote today!
               </p>
               <motion.div 

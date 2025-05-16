@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   // Ensures page build works correctly on GitHub Pages
-  basePath: process.env.NODE_ENV === 'production' ? '/dyelectrical' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/dyelectrical' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/vpowerelectrical' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/vpowerelectrical' : '',
   images: {
     unoptimized: true,
   },

@@ -86,7 +86,7 @@ export default function Header() {
         opacity: isVisible ? 1 : 0
       }}
       transition={{ duration: 0.3 }}
-      className="bg-[#f5f5f5] py-4 px-4 md:px-6 sticky top-0 z-50 shadow-sm"
+      className="bg-[#f5f5f5] py-2 px-4 md:px-6 sticky top-0 z-50 shadow-sm"
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
@@ -95,11 +95,10 @@ export default function Header() {
               initial={{ rotate: -10 }}
               animate={{ rotate: 0 }}
               transition={{ duration: 0.5 }}
-              className="w-6 h-6 md:w-8 md:h-8 relative"
+              className="w-24 h-12 md:w-34 md:h-20 relative"
             >
-              <Image src={`${config.basePath}/zap.svg`} alt="DY Electrical Services Logo" width={24} height={24} className="md:w-8 md:h-8" />
+              <Image src={`${config.basePath}/VPOWER.svg`} alt="VPower Electrical Logo" width={160} height={80} className="md:w-34 md:h-20 w-24 h-12" />
             </motion.div>
-            <span className="text-sm md:text-xl">{config.companyName}</span>
           </Link>
         </div>
 
@@ -142,8 +141,8 @@ export default function Header() {
               <Button variant="ghost" size="icon" className="p-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
+                  width="48"
+                  height="48"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -165,8 +164,8 @@ export default function Header() {
               <Button variant="ghost" size="icon" className="p-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="48"
-                  height="48"
+                  width="56"
+                  height="56"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"

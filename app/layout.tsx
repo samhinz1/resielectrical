@@ -6,15 +6,15 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 // Define basePath for GitHub Pages deployment
-const basePath = process.env.NODE_ENV === 'production' ? '/dyelectrical' : '';
+const basePath = process.env.NODE_ENV === 'production' ? '/vpowerelectrical' : '';
 
 export const metadata: Metadata = {
-  title: "DY Electrical Services - Quality Home Electrical Solutions",
+  title: "VPOWER Electrical Services - Quality Home Electrical Solutions",
   description:
-    "DY Electrical Services",
+    "VPower Electrical Services",
   icons: {
-    icon: `${basePath}/zap.svg`,
-    apple: `${basePath}/zap.svg`,
+    icon: `${basePath}/VPOWER ICON.svg`,
+    apple: `${basePath}/VPOWER ICON.svg`,
   },
 }
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href={`${basePath}/zap.svg`} />
+        <link rel="icon" href={`${basePath}/VPOWER ICON.svg`} />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
