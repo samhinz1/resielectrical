@@ -375,108 +375,32 @@ export default function Home() {
                   }}
                 >
                   {/* First set of testimonials - each with fixed dimensions */}
-                  <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
-                    <div className="h-full">
-                      <TestimonialCard
-                        quote="Outstanding service! VPower Electrical Services truly exceeded my expectations. From start to finish, their team exhibited professionalism and expertise. I'm thrilled with the quality of their workmanship. Highly recommend!"
-                        author="Sarah Johnson"
-                        rating={5}
-                        image="https://randomuser.me/api/portraits/women/44.jpg"
-                      />
+                  {config.testimonials.map((testimonial, index) => (
+                    <div key={`testimonial-${index}`} className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
+                      <div className="h-full">
+                        <TestimonialCard
+                          quote={testimonial.quote}
+                          author={testimonial.author}
+                          rating={testimonial.rating}
+                          image={testimonial.image}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
-                    <div className="h-full">
-                      <TestimonialCard
-                        quote="VPower Electrical Services saved the day! I was facing a tricky electrical issue at home, and their quick response and efficient troubleshooting resolved it in no time. Friendly staff, excellent service. Thank you, VPower Electrical Services!"
-                        author="Michael Chang"
-                        rating={5}
-                        image="https://randomuser.me/api/portraits/men/32.jpg"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
-                    <div className="h-full">
-                      <TestimonialCard
-                        quote="Impressive work by VPower Electrical Services! Their attention to detail and dedication to ensuring our electrical needs were met with precision and care were truly commendable. We couldn't be happier with the results."
-                        author="Emily Patel"
-                        rating={5}
-                        image="https://randomuser.me/api/portraits/women/68.jpg"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
-                    <div className="h-full">
-                      <TestimonialCard
-                        quote="The team at VPower Electrical Services did an amazing job with our home rewiring project. They were professional, punctual, and worked cleanly. The pricing was fair, and the results are excellent!"
-                        author="Robert Wilson"
-                        rating={5}
-                        image="https://randomuser.me/api/portraits/men/67.jpg"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
-                    <div className="h-full">
-                      <TestimonialCard
-                        quote="I've used VPower Electrical Services several times for my business, and they never disappoint. Their knowledge and expertise are unmatched, and they always provide prompt and reliable service."
-                        author="Lisa Thompson"
-                        rating={5}
-                        image="https://randomuser.me/api/portraits/women/29.jpg"
-                      />
-                    </div>
-                  </div>
+                  ))}
                   
                   {/* Duplicate set for seamless looping */}
-                  <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
-                    <div className="h-full">
-                      <TestimonialCard
-                        quote="Outstanding service! VPower Electrical Services truly exceeded my expectations. From start to finish, their team exhibited professionalism and expertise. I'm thrilled with the quality of their workmanship. Highly recommend!"
-                        author="Sarah Johnson"
-                        rating={5}
-                        image="https://randomuser.me/api/portraits/women/44.jpg"
-                      />
+                  {config.testimonials.map((testimonial, index) => (
+                    <div key={`testimonial-duplicate-${index}`} className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
+                      <div className="h-full">
+                        <TestimonialCard
+                          quote={testimonial.quote}
+                          author={testimonial.author}
+                          rating={testimonial.rating}
+                          image={testimonial.image}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
-                    <div className="h-full">
-                      <TestimonialCard
-                        quote="VPower Electrical Services saved the day! I was facing a tricky electrical issue at home, and their quick response and efficient troubleshooting resolved it in no time. Friendly staff, excellent service. Thank you, VPower Electrical Services!"
-                        author="Michael Chang"
-                        rating={5}
-                        image="https://randomuser.me/api/portraits/men/32.jpg"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
-                    <div className="h-full">
-                      <TestimonialCard
-                        quote="Impressive work by VPower Electrical Services! Their attention to detail and dedication to ensuring our electrical needs were met with precision and care were truly commendable. We couldn't be happier with the results."
-                        author="Emily Patel"
-                        rating={5}
-                        image="https://randomuser.me/api/portraits/women/68.jpg"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
-                    <div className="h-full">
-                      <TestimonialCard
-                        quote="The team at VPower Electrical Services did an amazing job with our home rewiring project. They were professional, punctual, and worked cleanly. The pricing was fair, and the results are excellent!"
-                        author="Robert Wilson"
-                        rating={5}
-                        image="https://randomuser.me/api/portraits/men/67.jpg"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-shrink-0 w-[320px] h-[400px] flex-grow-0 mx-2">
-                    <div className="h-full">
-                      <TestimonialCard
-                        quote="I've used VPower Electrical Services several times for my business, and they never disappoint. Their knowledge and expertise are unmatched, and they always provide prompt and reliable service."
-                        author="Lisa Thompson"
-                        rating={5}
-                        image="https://randomuser.me/api/portraits/women/29.jpg"
-                      />
-                    </div>
-                  </div>
+                  ))}
                 </motion.div>
               </div>
             </div>

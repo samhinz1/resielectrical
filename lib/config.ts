@@ -102,6 +102,40 @@ export const config = {
     quoteEmail: 'aidan@resielectrical.com.au'
   },
   
+  // Testimonials
+  testimonials: [
+    {
+      quote: "Outstanding service! RESI Electrical truly exceeded my expectations. From start to finish, their team exhibited professionalism and expertise. I'm thrilled with the quality of their workmanship. Highly recommend!",
+      author: "Sarah Johnson",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      quote: "RESI Electrical saved the day! I was facing a tricky electrical issue at home, and their quick response and efficient troubleshooting resolved it in no time. Friendly staff, excellent service. Thank you, RESI Electrical!",
+      author: "Michael Chang",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/men/32.jpg"
+    },
+    {
+      quote: "Impressive work by RESI Electrical! Their attention to detail and dedication to ensuring our electrical needs were met with precision and care were truly commendable. We couldn't be happier with the results.",
+      author: "Emily Patel",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/women/68.jpg"
+    },
+    {
+      quote: "The team at RESI Electrical did an amazing job with our home rewiring project. They were professional, punctual, and worked cleanly. The pricing was fair, and the results are excellent!",
+      author: "Robert Wilson",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/men/67.jpg"
+    },
+    {
+      quote: "I've used RESI Electrical several times for my business, and they never disappoint. Their knowledge and expertise are unmatched, and they always provide prompt and reliable service.",
+      author: "Lisa Thompson",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/women/29.jpg"
+    }
+  ],
+  
   // SEO information
   seo: {
     title: 'RESI Electrical Services | Brisbane & Gold Coast Electrician',
