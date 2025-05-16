@@ -95,9 +95,9 @@ export default function Header() {
               initial={{ rotate: -10 }}
               animate={{ rotate: 0 }}
               transition={{ duration: 0.5 }}
-              className="w-24 h-12 md:w-34 md:h-20 relative"
+              className="w-32 h-18 md:w-34 md:h-20 relative"
             >
-              <Image src={`${config.basePath}/VPOWER.svg`} alt="VPower Electrical Logo" width={160} height={80} className="md:w-34 md:h-20 w-24 h-12" />
+              <Image src={`${config.basePath}/VPOWER.svg`} alt="VPower Electrical Logo" width={160} height={80} className="md:w-36 md:h-20 w-24 h-12" />
             </motion.div>
           </Link>
         </div>
