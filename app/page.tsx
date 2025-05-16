@@ -45,7 +45,7 @@ const cardVariant = {
 
 export default function Home() {
   // Define basePath for GitHub Pages deployment
-  const basePath = process.env.NODE_ENV === 'production' ? 'vpower' : '';
+  const basePath = process.env.NODE_ENV === 'production' ? '/vpower' : '';
   
   return (
     <div className="flex flex-col min-h-screen">
