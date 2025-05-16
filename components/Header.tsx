@@ -13,6 +13,13 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
+// Define styles based on config
+const styles = {
+  header: `bg-[${config.branding.colors.background}] py-2 px-4 md:px-6 sticky top-0 z-50 shadow-sm`,
+  navLink: `text-[${config.branding.colors.primary}] hover:text-[${config.branding.colors.text}]`,
+  callButton: `bg-[${config.branding.colors.secondary}] hover:bg-[${config.branding.colors.secondary}]/90 text-white rounded-md`
+}
+
 // Menu animation variants
 const menuVariants = {
   hidden: { 
@@ -86,7 +93,7 @@ export default function Header() {
         opacity: isVisible ? 1 : 0
       }}
       transition={{ duration: 0.3 }}
-      className="bg-[#f5f5f5] py-2 px-4 md:px-6 sticky top-0 z-50 shadow-sm"
+      className={styles.header}
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
@@ -97,23 +104,23 @@ export default function Header() {
               transition={{ duration: 0.5 }}
               className="w-32 h-18 md:w-34 md:h-20 relative"
             >
-              <Image src={`${config.basePath}/VPOWER.svg`} alt="VPower Electrical Logo" width={160} height={80} className="md:w-36 md:h-20 w-24 h-12" />
+              <Image src={`${config.basePath}${config.branding.logo.path}`} alt={config.branding.logo.altText} width={config.branding.logo.width} height={config.branding.logo.height} className="md:w-36 md:h-20 w-24 h-12" />
             </motion.div>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href={`${config.basePath}/about`} className="text-[#242131] hover:text-[#494544]">
+          <Link href={`${config.basePath}/about`} className={styles.navLink}>
             About us
           </Link>
-          <Link href={`${config.basePath}/services`} className="text-[#242131] hover:text-[#494544]">
+          <Link href={`${config.basePath}/services`} className={styles.navLink}>
             Services
           </Link>
-          <Link href={`${config.basePath}/projects`} className="text-[#242131] hover:text-[#494544]">
+          <Link href={`${config.basePath}/projects`} className={styles.navLink}>
             Projects
           </Link>
-          <Link href={`${config.basePath}/contact`} className="text-[#242131] hover:text-[#494544]">
+          <Link href={`${config.basePath}/contact`} className={styles.navLink}>
             Contact
           </Link>
         </nav>
@@ -124,7 +131,7 @@ export default function Header() {
           whileTap={{ scale: 0.95 }}
           className="hidden md:block"
         >
-          <Button className="bg-[#d4af37] hover:bg-[#d4af37]/90 text-white rounded-md">
+          <Button className={styles.callButton}>
             <Phone size={18} className="mr-2" />
             {config.phoneNumber}
           </Button>

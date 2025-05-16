@@ -44,9 +44,6 @@ const cardVariant = {
 }
 
 export default function Home() {
-  // Define basePath for GitHub Pages deployment
-  const basePath = process.env.NODE_ENV === 'production' ? '/vpower' : '';
-  
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
@@ -64,11 +61,11 @@ export default function Home() {
               className="space-y-6"
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-[#242131] leading-tight">
-                #1 Trusted Electrician in Brisbane & Surrounds
+                {config.tagline}
               </h1>
               <div className="h-1 w-32 bg-[#d4af37]"></div>
               <p className="text-[#494544] text-lg">
-                We have been delivering quality residential and commercial electrical solutions to Brisbane & the surrounding areas for over 20 years.
+                {config.description}
               </p>
               
               {/* Rating Badge */}
@@ -82,13 +79,13 @@ export default function Home() {
                 <div className="bg-[#242131] text-white px-4 py-2 rounded-lg flex items-center gap-3 border border-[#d4af37]">
                   <div className="flex -space-x-2">
                     <div className="w-10 h-10 rounded-full border-2 border-[#d4af37] overflow-hidden bg-gray-200">
-                      <Image src={`${basePath}/avatar1.png`} alt="Customer" width={40} height={40} className="object-cover" />
+                      <Image src={`${config.basePath}/avatar1.png`} alt="Customer" width={40} height={40} className="object-cover" />
                     </div>
                     <div className="w-10 h-10 rounded-full border-2 border-[#d4af37] overflow-hidden bg-gray-200">
-                      <Image src={`${basePath}/avatar2.png`} alt="Customer" width={40} height={40} className="object-cover" />
+                      <Image src={`${config.basePath}/avatar2.png`} alt="Customer" width={40} height={40} className="object-cover" />
                     </div>
                     <div className="w-10 h-10 rounded-full border-2 border-[#d4af37] overflow-hidden bg-gray-200">
-                      <Image src={`${basePath}/avatar3.png`} alt="Customer" width={40} height={40} className="object-cover" />
+                      <Image src={`${config.basePath}/avatar3.png`} alt="Customer" width={40} height={40} className="object-cover" />
                     </div>
                   </div>
                   <div>
@@ -100,7 +97,7 @@ export default function Home() {
                       ))}
                     </div>
                     <div className="flex items-center gap-2">
-                      <Image src={`${basePath}/googlelogo.webp`} alt="Google" width={16} height={16} className="object-contain" />
+                      <Image src={`${config.basePath}/googlelogo.webp`} alt="Google" width={16} height={16} className="object-contain" />
                       <p className="text-sm font-medium text-[#d4af37]">From 100+ reviews</p>
                     </div>
                   </div>
@@ -135,7 +132,7 @@ export default function Home() {
             >
               <div className="relative h-[400px] rounded-lg md:h-[500px]">
                 <Image
-                  src={`${basePath}/brisbane.avif`}
+                  src={`${config.basePath}${config.branding.images.hero}`}
                   alt="Brisbane"
                   fill
                   className="object-cover"
@@ -257,7 +254,7 @@ export default function Home() {
             >
               <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src={`${basePath}/powerline.avif`}
+                  src={`${config.basePath}${config.branding.images.experience}`}
                   alt="Powerline"
                   fill
                   className="object-cover"

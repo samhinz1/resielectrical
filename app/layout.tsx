@@ -2,19 +2,19 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
+import { config } from "@/lib/config"
 
 const inter = Inter({ subsets: ["latin"] })
 
-// Define basePath for GitHub Pages deployment
-const basePath = process.env.NODE_ENV === 'production' ? '/vpower' : '';
+// Use basePath from config
+const { basePath } = config
 
 export const metadata: Metadata = {
-  title: "VPOWER Electrical Services - Quality Home Electrical Solutions",
-  description:
-    "VPower Electrical Services",
+  title: `${config.companyName}`,
+  description: config.seo.description,
   icons: {
-    icon: `${basePath}/VPOWER ICON.svg`,
-    apple: `${basePath}/VPOWER ICON.svg`,
+    icon: `${basePath}${config.branding.icon.path}`,
+    apple: `${basePath}${config.branding.icon.path}`,
   },
 }
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href={`${basePath}/VPOWER ICON.svg`} />
+        <link rel="icon" href={`${basePath}${config.branding.icon.path}`} />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
