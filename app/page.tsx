@@ -460,7 +460,7 @@ export default function Home() {
             >
               <p className="text-white text-lg">
                 With years of experience serving residential homes in the area, we're committed to delivering reliable
-                and expert electrical solutions tailored to your needs. Trust VPower Electrical Services for all your home electrical needs,
+                and expert electrical solutions tailored to your needs. Trust {config.companyName} for all your home electrical needs,
                 get a quote today!
               </p>
               <motion.div 
