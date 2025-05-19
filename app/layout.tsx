@@ -1,10 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Raleway } from "next/font/google"
 import "./globals.css"
 import { config } from "@/lib/config"
 
-const inter = Inter({ subsets: ["latin"] })
+const raleway = Raleway({ 
+  subsets: ["latin"],
+  display: 'swap',
+})
 
 // Use basePath from config
 const { basePath } = config
@@ -28,7 +31,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href={`${basePath}${config.branding.icon.path}`} />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={raleway.className}>{children}</body>
     </html>
   )
 }

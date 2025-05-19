@@ -17,7 +17,7 @@ import {
 const styles = {
   header: `bg-[${config.branding.colors.background}] py-2 px-4 md:px-6 sticky top-0 z-50 shadow-sm`,
   navLink: `text-[${config.branding.colors.primary}] hover:text-[${config.branding.colors.text}]`,
-  callButton: `bg-[${config.branding.colors.secondary}] hover:bg-[${config.branding.colors.secondary}]/90 text-white rounded-md`
+  callButton: `bg-[#242131] hover:bg-[#242131]/90 text-[#d4af37] rounded-md`
 }
 
 // Menu animation variants
@@ -132,7 +132,7 @@ export default function Header() {
           className="hidden md:block"
         >
           <Button className={styles.callButton}>
-            <Phone size={18} className="mr-2" />
+            <Phone size={18} className="mr-2 text-[#d4af37]" />
             {config.phoneNumber}
           </Button>
         </motion.div>
@@ -231,8 +231,8 @@ export default function Header() {
                   
                   <motion.div variants={menuItemVariants} className="pt-4">
                     <a href={`tel:${config.phoneNumber.replace(/\s/g, '')}`} className="w-full block">
-                      <Button className="w-full bg-[#d4af37] hover:bg-[#d4af37]/90 text-white rounded-md">
-                        <Phone size={18} className="mr-2" />
+                      <Button className="w-full bg-[#242131] hover:bg-[#242131]/90 text-[#d4af37] rounded-md">
+                        <Phone size={18} className="mr-2 text-[#d4af37]" />
                         {config.phoneNumber}
                       </Button>
                     </a>

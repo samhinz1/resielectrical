@@ -6,7 +6,7 @@ export const config = {
   // Company information
   companyName: 'RESI Electrical',
   shortName: 'Resi',
-  tagline: '#1 Trusted Electrician in Brisbane & Surrounds',
+  tagline: 'Powering Brisbane with Trust & Expertise',
   description: 'We have been delivering quality residential and commercial electrical solutions to Brisbane & the surrounding areas for over 20 years.',
   yearEstablished: '2004',
   phoneNumber: '0411 215 355',
@@ -42,7 +42,7 @@ export const config = {
     },
     images: {
       hero: '/brisbane.avif',
-      experience: '/powerline.avif'
+      experience: '/brisbane3.avif'
     }
   },
   
